@@ -1,0 +1,17 @@
+name: First Workflow
+
+# "on" defines the events that this workflow should be triggered
+# workflow_dispatch - manual trigger
+on: workflow_dispatch
+
+jobs:
+  first-job:
+    # Defines which environment the steps should be executed
+    runs-on: windows-latest
+
+    steps:
+      - name: Print greeting
+        run: echo "helloo"
+
+      - name: Print goodbye
+        run: echo "byee"
