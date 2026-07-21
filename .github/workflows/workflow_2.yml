@@ -1,0 +1,5 @@
+name: Worklfow 1
+on: push
+
+  tiggers when a new issue is created
+  output the event details on shell via echo {{ github }}

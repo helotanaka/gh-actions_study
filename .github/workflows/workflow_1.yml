@@ -1,0 +1,13 @@
+name: Worklfow 1
+on: push
+
+job:
+  prepare environment:
+    runs-on: ubuntu-latest
+
+    donwload project
+    install dependencies
+    run ~lint~ test and build scripts (tem no package.json)
+    output message ex:~deploring project kikikii~
+
+    do 3 jobs that run after each one
