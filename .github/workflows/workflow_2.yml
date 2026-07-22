@@ -1,8 +1,6 @@
 name: Workflow 2
 
-on:
-  issues:
-    types: [opened]
+on: issues
 
 jobs:
   show_event_details:
