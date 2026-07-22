@@ -1,5 +1,13 @@
-name: Worklfow 1
-on: push
+name: Workflow 2
 
-  tiggers when a new issue is created
-  output the event details on shell via echo {{ github }}
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  show_event_details:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print event details
+        run: echo '${{ toJson(github.event) }}'

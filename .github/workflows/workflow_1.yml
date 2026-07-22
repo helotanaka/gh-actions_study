@@ -1,13 +1,29 @@
 name: Worklfow 1
 on: push
 
-job:
-  prepare environment:
+jobs:
+  setup_project:
     runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v3
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Download  
+        run: echo "Download complete!"
 
-    donwload project
-    install dependencies
-    run ~lint~ test and build scripts (tem no package.json)
-    output message ex:~deploring project kikikii~
-
-    do 3 jobs that run after each one
+      - name: Install Dependencies
+        run: npm ci
+      - name: Build Project
+        run: npm run build
+      - name: Deployment
+        run: echo "Deploying project!"
+      
+      - name: Run Lint
+        run: npm run lint
+      - name: Run Scripts
+        run: npm run test
+      - name: Scripts
+        run:  echo "Lint and Scripts complete!"
