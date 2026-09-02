@@ -18,7 +18,7 @@ jobs:
   build:
     needs: test
     runs-on: ubuntu-latest
-    Outputs:
+    Output:
       script-file: ${{ steps.publish.outputs.script-file }}
     steps:
       - name: Get code
