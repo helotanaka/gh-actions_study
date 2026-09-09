@@ -1,4 +1,4 @@
-name: 'Get & Cache Dependencies
+name: 'Get & Cache Dependencies'
 description: 'Get the dependencies (via npm) and cache them'
 runs:
   using: 'composite'
